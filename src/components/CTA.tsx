@@ -18,7 +18,7 @@ function CTA() {
       </div>
 
       <img
-        className="absolute -bottom-36 left-1/2 transform -translate-x-1/2 lg:w-[1000px] -z-50"
+        className="absolute -bottom-12 sm:-bottom-22 md:-bottom-36 left-1/2 transform -translate-x-1/2 lg:w-[1000px] -z-50"
         src="/doodles/fancyLines.svg"
         alt="decoration-img"
       />

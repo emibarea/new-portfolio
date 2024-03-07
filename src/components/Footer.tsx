@@ -1,9 +1,12 @@
+"use client";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import { footer } from "@/utils/globals";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 function Footer() {
+  const pathname = usePathname();
   return (
     <footer className="flex flex-col w-screen px-5 py-10 z-5 border-t border-[#141e33] bg-custom">
       <div className="w-full max-w-4xl m-auto grid grid-cols-2 sm:grid-cols-3 justify-between items-start">
@@ -36,7 +39,14 @@ function Footer() {
                           {item.name}
                         </a>
                       ) : (
-                        <Link className="hover:underline" href={item.link}>
+                        <Link
+                          className={`${
+                            pathname === item.link
+                              ? "underline underline-offset-2"
+                              : ""
+                          } hover:underline`}
+                          href={item.link}
+                        >
                           {item.name}
                         </Link>
                       )}
@@ -49,7 +59,7 @@ function Footer() {
         })}
         <div className="text-center col-span-2 sm:col-auto sm:text-left pt-8 sm:mt-0 sm:pt-0 text-fun-gray border-t border-fun-pink-dark sm:border-0">
           <h4 className="uppercase text-fun-gray text-sm font-bold">
-            Support My Work
+            Apoya mi trabajo
           </h4>
           <div className="space-y-2 mt-4 w-full flex items-center sm:items-start flex-col">
             <div>

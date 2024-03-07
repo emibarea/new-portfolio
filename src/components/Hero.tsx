@@ -20,9 +20,9 @@ function Hero() {
   });
 
   return (
-    <header className="pt-24 bg-custom overflow-hidden w-screen min-h-screen max-h-screen flex flex-col justify-around items-center">
+    <header className="pt-24 bg-custom overflow-hidden w-screen min-h-screen max-h-screen flex flex-col justify-around items-center px-2 md:px-0">
       <section className="z-10 flex flex-col justify-center items-center max-w-full">
-        <h1 className="cursor-default text-5xl w-auto max-w-full text-center font-black mb-6 tracking-1">
+        <h1 className="cursor-default text-4xl md:text-5xl w-auto max-w-full text-center font-black mb-4 md:mb-6 tracking-1">
           Emiliano Barea
         </h1>
         <h2 className="min-h-[48px] md:min-h-[24px] overflow-hidden cursor-default text-center max-w-full text-md mb-6 uppercase tracking-[15px] text-gray-400 underline-offset-2">

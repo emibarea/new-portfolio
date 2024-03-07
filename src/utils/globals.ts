@@ -74,21 +74,21 @@ type Footer = {
 export const footer: Footer = {
   columns: [
     {
-      title: "Pages",
+      title: "Paginas",
       links: [
         {
-          name: "Home",
+          name: "Inicio",
           link: "/",
           leavesWebsite: false,
         },
         {
-          name: "Projects",
-          link: "/projects",
+          name: "Proyectos",
+          link: "/proyectos",
           leavesWebsite: false,
         },
         {
-          name: "Certificates",
-          link: "/certs",
+          name: "Certificados",
+          link: "/certificados",
           leavesWebsite: false,
         },
       ],

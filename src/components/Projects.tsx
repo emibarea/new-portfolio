@@ -8,7 +8,7 @@ import SectionTitle from "./SectionTitle";
 
 function Projects() {
   return (
-    <div className="flex flex-col text-left justify-between pt-8 relative">
+    <div className="px-4 md:px-0 lex flex-col text-left justify-between pt-8 relative">
       <div>
         <SectionTitle title="Here are a few of my favorite projects." />
       </div>

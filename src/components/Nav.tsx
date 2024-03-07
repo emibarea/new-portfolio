@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Dropdown } from "flowbite-react";
@@ -10,11 +10,11 @@ import {
 } from "react-icons/ai";
 import { TbCertificate } from "react-icons/tb";
 import { BiMessageSquareDetail } from "react-icons/bi";
-import { HiLogout, HiLogin } from "react-icons/hi";
+import { HiLogin } from "react-icons/hi";
+import { usePathname } from "next/navigation";
 
 function Nav() {
-  const [underline, setUnderline] = useState("home");
-
+  const pathname = usePathname();
   return (
     <nav
       id="Header"
@@ -29,11 +29,8 @@ function Nav() {
         <Link
           href="/"
           className={`${
-            underline === "home"
-              ? "underline underline-offset-2 scale-110 transition duration-150 ease-in-out"
-              : ""
-          }`}
-          onClick={() => setUnderline("home")}
+            pathname === "/" ? "underline underline-offset-2" : ""
+          } p-1`}
         >
           Inicio
         </Link>
@@ -41,11 +38,8 @@ function Nav() {
         <Link
           href="/proyectos"
           className={`${
-            underline === "proyectos"
-              ? "underline underline-offset-2 scale-110 transition duration-150 ease-in-out"
-              : ""
-          }`}
-          onClick={() => setUnderline("proyectos")}
+            pathname === "/proyectos" ? "underline underline-offset-2" : ""
+          } p-1`}
         >
           Proyectos
         </Link>
@@ -53,11 +47,8 @@ function Nav() {
         <Link
           href="/certificados"
           className={`${
-            underline === "certificados"
-              ? "underline underline-offset-2 scale-110 transition duration-150 ease-in-out"
-              : ""
-          }`}
-          onClick={() => setUnderline("certificados")}
+            pathname === "/certificados" ? "underline underline-offset-2" : ""
+          } p-1`}
         >
           Certificados
         </Link>
