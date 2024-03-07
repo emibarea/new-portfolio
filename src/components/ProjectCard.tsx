@@ -1,10 +1,19 @@
 import React from "react";
 import Image from "next/image";
-import { kebabCase } from "@/utils/utils";
 import Link from "next/link";
-import project from "@/utils/projects";
+import { kebabCase } from "@/utils/utils";
 
-function ProjectCard({ project }) {
+interface Project {
+  id: number;
+  link?: string;
+  github?: string;
+  img: string;
+  title: string;
+  desc: string;
+  tags: string[];
+}
+
+function ProjectCard({ project }: { project: Project }) {
   return (
     <div
       className="max-w-sm mx-auto flex flex-col projects-center md:projects-start md:justify-center"
@@ -15,7 +24,11 @@ function ProjectCard({ project }) {
         target="_blank"
         className={`w-full relative rounded-xl border-fun-gray border p-2 transition hover:-translate-y-2 hover:opacity-75 hover:border-fun-pink will-change-projectCard`}
       >
-        <img className="w-full rounded-md" src={project.img} />
+        <Image
+          alt="project-img"
+          className="w-full rounded-md"
+          src={project.img}
+        />
       </a>
       <div className="w-full mt-5">
         <div className="flex projects-center justify-between">
