@@ -32,3 +32,26 @@ html {
 .sqD:not(.squiggle-hero-pop1) {
   animation: float 2s infinite ease-in-out;
 }
+.landingSectionTitle::before {
+  content: "";
+  position: absolute;
+  left: 105%;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100vw;
+  background-color: #00c7ff;
+}
+
+@media (max-width: 768px) {
+  .landingSectionTitle::before {
+    left: 50%;
+    right: auto;
+    top: -20px;
+    transform: translate(-50%, -50%);
+    height: 8px;
+    width: 150px;
+    background-color: #00c7ff;
+  }
+}
