@@ -8,7 +8,10 @@ import { usePathname } from "next/navigation";
 function Footer() {
   const pathname = usePathname();
   return (
-    <footer className="flex flex-col w-screen px-5 py-10 z-5 border-t border-[#141e33] bg-custom">
+    <footer
+      id="contacto"
+      className="flex flex-col w-screen px-5 py-10 z-5 border-t border-[#141e33] bg-custom"
+    >
       <div className="w-full max-w-4xl m-auto grid grid-cols-2 sm:grid-cols-3 justify-between items-start">
         {footer.columns.map((item, index) => {
           return (
@@ -63,10 +66,7 @@ function Footer() {
           </h4>
           <div className="space-y-2 mt-4 w-full flex items-center sm:items-start flex-col">
             <div>
-              <a
-                href="https://www.linkedin.com/in/emiliano-barea-monetti-781a00231/"
-                target="_blank"
-              >
+              <a href="https://www.buymeacoffee.com/emibarea" target="_blank">
                 <Image
                   width={200}
                   height={200}
@@ -78,7 +78,7 @@ function Footer() {
             </div>
 
             <div>
-              <a href="/" target="_blank">
+              <a href="https://paypal.me/emibarea" target="_blank">
                 <Image
                   width={200}
                   height={200}

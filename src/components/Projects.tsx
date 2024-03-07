@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React from "react";
+import Image from "next/image";
 
 import projects from "@/utils/projects";
 
@@ -8,12 +8,26 @@ import SectionTitle from "./SectionTitle";
 
 function Projects() {
   return (
-    <div className="px-4 md:px-0 lex flex-col text-left justify-between pt-8 relative">
-      <div>
+    <div className="px-4  lex flex-col text-left justify-between relative">
+      <div className="relative">
+        <Image
+          className="sqD absolute -right-6 -top-12"
+          width={150}
+          height={150}
+          src="/icons/coder.svg"
+          alt="decoration-icon"
+        />
+        <Image
+          className="sqD absolute -left-6 -bottom-12"
+          width={150}
+          height={150}
+          src="/icons/dino.svg"
+          alt="decoration-icon"
+        />
         <SectionTitle title="Here are a few of my favorite projects." />
       </div>
       <div className="grid grid-cols-1 gap-12 md:gap-5 md:grid-cols-3 items-start">
-        {projects.slice(-3).map((item) => {
+        {projects.slice(0, 3).map((item) => {
           return <ProjectCard key={item.id} project={item} />;
         })}
       </div>

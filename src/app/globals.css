@@ -10,6 +10,7 @@
 }
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 .bg-custom {
   background-color: #111827;

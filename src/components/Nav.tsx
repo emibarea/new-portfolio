@@ -2,19 +2,21 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 import { Dropdown } from "flowbite-react";
+
 import {
   AiOutlineHome,
-  AiOutlineUser,
+  AiOutlineMenu,
   AiOutlineFolderOpen,
 } from "react-icons/ai";
 import { TbCertificate } from "react-icons/tb";
 import { BiMessageSquareDetail } from "react-icons/bi";
-import { HiLogin } from "react-icons/hi";
-import { usePathname } from "next/navigation";
 
 function Nav() {
   const pathname = usePathname();
+
   return (
     <nav
       id="Header"
@@ -25,7 +27,7 @@ function Nav() {
       </div>
 
       {/* {right side} */}
-      <div className="flex space-x-4">
+      <div className="hidden lg:flex space-x-4">
         <Link
           href="/"
           className={`${
@@ -56,24 +58,34 @@ function Nav() {
 
       {/* mobile menu */}
       <div className="z-20 flex lg:hidden">
-        <Dropdown inline label="Menu">
+        <Dropdown
+          inline
+          arrowIcon={false}
+          label={<AiOutlineMenu className="w-6 h-6" />}
+        >
+          <Dropdown.Header>
+            <a
+              href="mailto:emilianobarea8@gmail.com"
+              className="block truncate text-sm font-medium underline underline-offset-1"
+            >
+              emilianobarea8@gmail.com
+            </a>
+          </Dropdown.Header>
           <Dropdown.Item icon={AiOutlineHome}>
             <Link href="/">Inicio</Link>
           </Dropdown.Item>
-          <Dropdown.Item icon={AiOutlineUser}>
-            <Link href="sobremi">Sobre mi</Link>
-          </Dropdown.Item>
           <Dropdown.Item icon={AiOutlineFolderOpen}>
-            <Link href="proyectos">Portafolio</Link>
+            <Link href="proyectos">Proyectos</Link>
           </Dropdown.Item>
           <Dropdown.Item icon={TbCertificate}>
             <Link href="certificados">Certificados</Link>
           </Dropdown.Item>
-          <Dropdown.Item icon={BiMessageSquareDetail}>
-            <Link href="contacto">Contacto</Link>
-          </Dropdown.Item>
           <Dropdown.Divider />
-          <Dropdown.Item icon={HiLogin}>Iniciar Sesion</Dropdown.Item>
+          <Dropdown.Item icon={BiMessageSquareDetail}>
+            <Link href={`${pathname === "/" ? "#contacto" : "/#contacto"} `}>
+              Contacto
+            </Link>
+          </Dropdown.Item>
         </Dropdown>
       </div>
     </nav>
