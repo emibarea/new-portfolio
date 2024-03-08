@@ -60,7 +60,7 @@ function Hero() {
           <div className="relative inline-flex  group">
             <div className="absolute transitiona-all duration-1000 opacity-30 -inset-px bg-gradient-to-r from-[#9089fc] via-[#ff80b5] to-[#9089fc] rounded-xl blur-lg group-hover:opacity-70 group-hover:-inset-1 group-hover:duration-200 animate-tilt"></div>
             <a
-              href="#"
+              href="#contacto"
               className="relative inline-flex bg-black/25 border border-white items-center justify-center px-6 py-4 font-semibold transition-all duration-200 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:scale-105 ease active:scale-95"
               role="button"
             >

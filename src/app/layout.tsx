@@ -23,7 +23,6 @@ export default function RootLayout({
         className={`${inter.className} text-gray-200 bg-custom`}
       >
         <Nav />
-        {/* <CustomCursor /> */}
         {children}
         <Footer />
       </body>
