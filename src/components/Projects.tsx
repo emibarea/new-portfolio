@@ -8,7 +8,7 @@ import SectionTitle from "./SectionTitle";
 
 function Projects() {
   return (
-    <div className="px-4  lex flex-col text-left justify-between relative">
+    <div className="px-4 mt-8 flex flex-col text-left justify-between relative ">
       <Image
         className="hidden md:block sqD absolute -right-6 bottom-0"
         width={150}

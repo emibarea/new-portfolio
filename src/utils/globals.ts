@@ -98,19 +98,19 @@ export const footer: Footer = {
       links: [
         {
           name: "GitHub",
-          link: "https://github.com/Johnny1305",
+          link: "https://github.com/emibarea",
           icon: "/icons/github-f.svg",
           leavesWebsite: true,
         },
         {
           name: "LinkedIn",
-          link: "https://www.linkedin.com/in/johnny13/",
+          link: "https://www.linkedin.com/in/emiliano-barea-monetti-781a00231/",
           icon: "/icons/linkedin-f.svg",
           leavesWebsite: true,
         },
         {
           name: "Instagram",
-          link: "https://instagram.com/Johnny13.htb",
+          link: "https://www.instagram.com/bareaemiliano/",
           icon: "/icons/instagram.svg",
           leavesWebsite: true,
         },

@@ -1,4 +1,5 @@
 import CTA from "@/components/CTA";
+import Certifications from "@/components/Certifications";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
@@ -11,6 +12,7 @@ export default function Home() {
         <div className="mt-20 space-y-32  w-full flex flex-col justify-center items-center">
           <Projects />
           <Skills />
+          <Certifications />
         </div>
 
         <CTA />

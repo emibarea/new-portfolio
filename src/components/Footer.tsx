@@ -45,9 +45,9 @@ function Footer() {
                         <Link
                           className={`${
                             pathname === item.link
-                              ? "underline underline-offset-2"
+                              ? "underline underline-offset-2 text-[#00c7ff]"
                               : ""
-                          } hover:underline`}
+                          } hover:underline hover:scale-105 transition duration-150 ease-in-out`}
                           href={item.link}
                         >
                           {item.name}

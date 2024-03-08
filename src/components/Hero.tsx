@@ -16,15 +16,31 @@ function Hero() {
   const [typedText] = useTypewriter({
     words: ["Estudiante ing. Sistemas", "Fullstack Developer"],
     typeSpeed: 80,
-    deleteSpeed: 100,
+    deleteSpeed: 70,
   });
 
   return (
-    <header className="pt-24 bg-custom overflow-hidden w-screen min-h-screen max-h-screen flex flex-col justify-around items-center px-2 md:px-0">
+    <header className="pt-24 bg-custom  overflow-hidden w-screen min-h-screen max-h-screen flex flex-col justify-around items-center px-2 md:px-0">
       <section className="z-10 flex flex-col justify-center items-center max-w-full">
-        <h1 className="cursor-default text-4xl md:text-5xl w-auto max-w-full text-center font-black mb-4 md:mb-6 tracking-1 animate-fade animate-ease-in-out animate-duration-[1000ms] animate-delay-[1000ms]">
-          Emiliano Barea
-        </h1>
+        <div className="relative">
+          <Image
+            className="sqD -right-12 -bottom-12 absolute"
+            width={100}
+            height={100}
+            src="/icons/js.svg"
+            alt="decoration-icon"
+          />
+          <Image
+            className="sqD -left-14 -top-8 absolute"
+            width={100}
+            height={100}
+            src="/skills/star-outline.svg"
+            alt="decoration-icon"
+          />
+          <h1 className="cursor-default  text-4xl md:text-5xl w-auto max-w-full text-center font-black mb-4 md:mb-6 tracking-1 animate-fade animate-ease-in-out animate-duration-[1000ms] animate-delay-[1000ms]">
+            Emiliano Barea
+          </h1>
+        </div>
         <h2 className="min-h-[48px] md:min-h-[24px] overflow-hidden cursor-default text-center max-w-full text-md mb-6 uppercase tracking-[15px] text-gray-400 underline-offset-2">
           {typedText}
           <Cursor cursorBlinking={false} cursorColor="white" cursorStyle="" />

@@ -31,8 +31,10 @@ function Nav() {
         <Link
           href="/"
           className={`${
-            pathname === "/" ? "underline underline-offset-2" : ""
-          } p-1`}
+            pathname === "/"
+              ? "underline underline-offset-2 text-[#00c7ff]"
+              : ""
+          } p-1 hover:underline hover:scale-105 transition duration-150 ease-in-out`}
         >
           Inicio
         </Link>
@@ -40,8 +42,10 @@ function Nav() {
         <Link
           href="/proyectos"
           className={`${
-            pathname === "/proyectos" ? "underline underline-offset-2" : ""
-          } p-1`}
+            pathname === "/proyectos"
+              ? "underline underline-offset-2 text-[#00c7ff]"
+              : ""
+          } p-1 hover:underline hover:scale-105 transition duration-150 ease-in-out`}
         >
           Proyectos
         </Link>
@@ -49,8 +53,10 @@ function Nav() {
         <Link
           href="/certificados"
           className={`${
-            pathname === "/certificados" ? "underline underline-offset-2" : ""
-          } p-1`}
+            pathname === "/certificados"
+              ? "underline underline-offset-2 text-[#00c7ff]"
+              : ""
+          } p-1 hover:underline hover:scale-105 transition duration-150 ease-in-out`}
         >
           Certificados
         </Link>
