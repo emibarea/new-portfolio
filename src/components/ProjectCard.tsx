@@ -24,10 +24,10 @@ function ProjectCard({ project }: { project: Project }) {
         className={`w-full relative rounded-xl border-[#00c7ff] border p-2 transition hover:-translate-y-2 hover:opacity-75`}
       >
         <Image
-          width={100}
-          height={100}
+          width={366}
+          height={180}
           alt="project-img"
-          className="w-full rounded-xl object-cover"
+          className="rounded-xl object-cover"
           src={project.img}
         />
       </a>
@@ -59,7 +59,9 @@ function ProjectCard({ project }: { project: Project }) {
             )}
           </div>
         </div>
-        <p className="text-[#7b89a8] text-left text-sm">{project.desc}</p>
+        <p className="text-[#7b89a8] text-left text-sm min-h-[40px]">
+          {project.desc}
+        </p>
         <ul className="flex flex-wrap items-center mt-2 -ml-2 list-none">
           {project.tags.map((tag) => {
             return (

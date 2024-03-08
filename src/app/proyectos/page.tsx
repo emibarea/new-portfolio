@@ -1,7 +1,7 @@
 import PageTitles from "@/components/PageTitles";
 import ProjectCard from "@/components/ProjectCard";
 import projects from "@/utils/projects";
-
+import Image from "next/image";
 export default function Page() {
   return (
     <section className="w-screen min-h-screen pt-24 flex flex-col items-center justify-center">
@@ -15,6 +15,13 @@ export default function Page() {
           return <ProjectCard key={item.id} project={item} />;
         })}
       </div>
+      <Image
+        src="/doodles/lineBreak.svg"
+        alt="decoration-line"
+        width={300}
+        height={300}
+        className="my-12"
+      />
     </section>
   );
 }

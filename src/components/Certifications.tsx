@@ -11,11 +11,26 @@ import "swiper/css/pagination";
 import { EffectCoverflow, Pagination, EffectCards } from "swiper/modules";
 import CertCard from "./CertCard";
 import SectionTitle from "./SectionTitle";
+import Image from "next/image";
 
 const Certifications = () => {
   return (
-    <section className="mt-12 w-screen sm:px-4">
-      <div className="max-w-[1200px] mx-auto">
+    <section id="certs" className="mt-12 w-screen sm:px-4">
+      <div className="max-w-[1200px] mx-auto relative">
+        <Image
+          className="sqD absolute bottom-0 left-0 md:-left-12"
+          src="/icons/yay.svg"
+          alt="decoration-icon"
+          width={100}
+          height={100}
+        />
+        <Image
+          className="sqD absolute -top-10 right-0"
+          src="/icons/paintbrush.svg"
+          alt="decoration-icon"
+          width={100}
+          height={100}
+        />
         <SectionTitle title="Desliza para ver mis certificaciones." />
       </div>
 
