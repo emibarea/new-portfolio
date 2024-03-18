@@ -14,7 +14,7 @@ html {
 }
 .bg-custom {
   background-color: #111827;
-  background-image: url("https://cdn.discordapp.com/attachments/1087185625658167420/1212532868971106325/bg-texture.png?ex=65f22e3b&is=65dfb93b&hm=45d51dee0756368e05c3858c233e6b8eb95ce056a0f768d96b641dc365b7ec76&");
+  background-image: url("/bg-texture.png");
 }
 
 @keyframes float {
